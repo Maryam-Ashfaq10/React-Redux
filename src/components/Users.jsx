@@ -19,7 +19,7 @@ export default function Users() {
    }
   
   return (
-    <div>
+    <>
 
         <Button variant="outlined" onClick={() => addNewUser(fakeData())}> Add Users </Button>
 
@@ -28,6 +28,6 @@ export default function Users() {
         </ul>
       
       <DeleteUser/>
-    </div>
+    </>
   )
 }

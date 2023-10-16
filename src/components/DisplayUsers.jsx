@@ -1,5 +1,9 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import IconButton from '@mui/material/IconButton';
+import DeleteIcon from '@mui/icons-material/Delete';
+
+
 
 export default function DisplayUsers() {
 
@@ -8,16 +12,19 @@ export default function DisplayUsers() {
     })
     console.log(data)
 
-   
-  return (
-    <div>
-        {
-    data.map((user, id) => {
-        return <li key={id}>
-            {user}
-        </li>
-    })
-}
-    </div>
-  )
+
+    return (
+        <>
+            {
+                data.map((user, id) => {
+                    return <div key={id}>
+                        {user}
+                        <IconButton aria-label="delete" size="small">
+                            <DeleteIcon fontSize="inherit" />
+                        </IconButton>
+                    </div>
+                })
+            }
+        </>
+    )
 }
