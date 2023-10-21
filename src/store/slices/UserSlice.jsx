@@ -4,7 +4,7 @@ const userSlice = createSlice({
     name : "user",
     initialState : [],
     reducers : {
-        //adding data i.e pushing data to the store
+       
         addUser(state, action) {
             state.push(action.payload);
         },
@@ -15,6 +15,7 @@ const userSlice = createSlice({
 
         deleteAll(state, action) {
             return [];
+            //can also be done using extraReducers
         },
     },
 });

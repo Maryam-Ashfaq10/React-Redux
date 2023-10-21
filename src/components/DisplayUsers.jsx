@@ -25,10 +25,12 @@ export default function DisplayUsers() {
             {
                 data.map((user, id) => {
                     return <div key={id}>
+
                         {user}
                         <IconButton aria-label="delete" size="small" onClick={() => deleteSingle(id)}>
                             <DeleteIcon fontSize="inherit" />
                         </IconButton>
+                        
                     </div>
                 })
             }
